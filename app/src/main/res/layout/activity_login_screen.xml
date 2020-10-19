@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".loginScreen">
+
+    <TextView
+        android:id="@+id/textWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="Welcome"
+        android:textColor="#fff"
+        android:textSize="40dp" />
+
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:hint="Username"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/butLogin"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/editPassword"
+        android:layout_centerHorizontal="true"
+        android:text="Login" />
+
+    <Button
+        android:id="@+id/butSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/butLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Create Account?"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>
