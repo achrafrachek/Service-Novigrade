@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminAddService">
+
+    <TextView
+        android:id="@+id/headerText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Service"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:id="@+id/serviceName"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/headerText1"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Service Name"
+        android:textSize="15dp"/>
+    <EditText
+        android:id="@+id/servicePrice"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:hint="Service Price"
+        android:layout_below="@id/serviceName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/InfoCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/servicePrice"
+        android:layout_marginTop="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/HeaderInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Information"
+                android:textSize="20dp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/addInfoRecycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/HeaderInfo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp" />
+
+            <EditText
+                android:id="@+id/addInfoTxt"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/addInfoRecycler"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:hint="Add information"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/buttonAjouterInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/addInfoTxt"
+                android:layout_alignLeft="@id/addInfoTxt"
+                android:layout_marginLeft="200dp"
+                android:text="Ajouter"
+                android:backgroundTint="#16effa"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/DocCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/InfoCardView"
+        android:layout_marginTop="20dp"
+        >
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Document"
+                android:textSize="20dp"
+                android:id="@+id/HeaderDoc"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/HeaderDoc"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addDocRecycler"
+                android:layout_centerHorizontal="true"/>
+
+            <EditText
+                android:id="@+id/addDocTxt"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/addDocRecycler"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="100dp"
+                android:textSize="15dp"
+                android:hint="Ajouter Document"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/addDocTxt"
+                android:layout_alignBaseline="@id/addDocTxt"
+                android:layout_marginLeft="200dp"
+                android:text="Ajouter"
+                android:id="@+id/buttonAjouterDoc"
+                android:backgroundTint="#16effa"/>
+
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/submitAdd"
+        android:layout_below="@id/DocCardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Submit"
+        android:backgroundTint="#16effa"
+        />
+
+
+</RelativeLayout>

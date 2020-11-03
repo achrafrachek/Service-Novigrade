@@ -17,5 +17,17 @@
         android:textSize="30dp"
         android:textColor="#fff"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textConnexion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Service Manager"
+        android:textColor="#000"
+        android:backgroundTint="#3295a8"
+        android:id="@+id/homeSwitch"
+        />
+
 
 </RelativeLayout>

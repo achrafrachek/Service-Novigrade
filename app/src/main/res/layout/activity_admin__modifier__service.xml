@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminAddService">
+    <TextView
+        android:id="@+id/headerText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Modifer Service"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:id="@+id/modifierserviceName"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/headerText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:hint="Service Name"
+        android:textSize="15dp"/>
+    <EditText
+        android:id="@+id/modifierservicePrice"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/modifierserviceName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint="Service Price"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ModifierInfoCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/modifierservicePrice"
+        android:layout_marginTop="20dp">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ModifierHeaderInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Information"
+                android:textSize="20dp"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ModifierInfoRecycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ModifierHeaderInfo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/ModifierInfoTxt"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/ModifierInfoRecycler"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:hint="Add information"
+                android:textSize="15dp"
+                />
+            <Button
+                android:id="@+id/buttonAjouterInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/ModifierInfoTxt"
+                android:layout_alignLeft="@id/ModifierInfoTxt"
+                android:layout_marginLeft="200dp"
+                android:backgroundTint="#16effa"
+                android:text="Ajouter"/>
+
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ModifierDocCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ModifierInfoCardView"
+        android:layout_marginTop="20dp"
+        >
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/ModifierHeaderDoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Document"
+                android:textSize="20dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ModifierDocRecycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ModifierHeaderDoc"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/ModifierDocTxt"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/ModifierDocRecycler"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:hint="Ajouter Document"
+                android:textSize="15dp"
+                />
+            <Button
+                android:id="@+id/buttonAjouterDoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/ModifierDocTxt"
+                android:layout_alignLeft="@id/ModifierDocTxt"
+                android:layout_marginLeft="200dp"
+                android:backgroundTint="#16effa"
+                android:text="Ajouter"/>
+
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/submitchange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ModifierDocCardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#16effa"
+        android:text="Submit Change"
+        />
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submitchange"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#16effa"
+        android:text="Delete"
+        />
+
+
+</RelativeLayout>

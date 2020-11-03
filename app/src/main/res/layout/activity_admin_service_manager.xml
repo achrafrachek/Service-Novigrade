@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminServiceManager"
+    >
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Service manager"
+        android:textColor="#000"
+        android:textSize="25dp"/>
+    <Button
+        android:id="@+id/addService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerText"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#16effa"
+        android:text="Ajouter"
+        />
+    <TextView
+        android:id="@+id/textCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/addService"
+        android:layout_alignLeft="@id/addService"
+        android:layout_marginLeft="120dp"
+        android:text="Service Disponible : 0"
+        android:textColor="#000"
+        android:textSize="17dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addServiceRecy"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addService"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+
+</RelativeLayout>
