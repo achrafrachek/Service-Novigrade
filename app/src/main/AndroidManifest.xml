@@ -8,7 +8,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Admin_Modifier_Service"></activity>
+        <activity android:name=".AdminServiceManager" />
+        <activity android:name=".AdminAddService" />
+        <activity android:name=".Home" />
         <activity android:name=".Register" />
         <activity android:name=".loginScreen" />
         <activity android:name=".MainActivity">
