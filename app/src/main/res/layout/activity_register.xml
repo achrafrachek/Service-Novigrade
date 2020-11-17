@@ -15,7 +15,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:textSize="40dp"
-        android:textColor="#fff"/>
+        android:alpha="0.8"
+        />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -60,6 +61,9 @@
         android:layout_height="50dp"
         android:layout_below="@id/regiEmail"
         android:text="Create Account"
+        android:textColor="#F5F7F6"
+        android:alpha="0.8"
+        android:background="@drawable/btn_shape"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -67,6 +71,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/butCreate"
         android:text="Already Have an Account?"
+        android:textColor="#F5F7F6"
+        android:alpha="0.7"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textSize="20dp"/>

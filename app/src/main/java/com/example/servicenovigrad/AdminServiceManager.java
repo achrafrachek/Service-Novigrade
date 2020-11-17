@@ -81,7 +81,7 @@ public class AdminServiceManager extends AppCompatActivity {
                         addServiceRecycler.setAdapter(serviceAdapter);
                         addServiceRecycler.setLayoutManager(new LinearLayoutManager(AdminServiceManager.this));
 
-                        textCount.setText(" Service Disponible " + count);
+                        textCount.setText(" Service Disponible : " + count);
                     }
 
                     @Override

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminServiceManager"
+    android:background="@drawable/bg"
     >
     <TextView
         android:id="@+id/headerText"
@@ -12,37 +13,45 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:alpha="0.6"
+
         android:text="Service manager"
         android:textColor="#000"
+
         android:textSize="25dp"/>
+
     <Button
         android:id="@+id/addService"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/headerText"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="#16effa"
+        android:layout_width="133dp"
+        android:layout_height="42dp"
+        android:layout_below="@id/textCount"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:alpha="0.94"
+        android:background="@drawable/btn_shape"
         android:text="Ajouter"
-        />
+        android:textColor="#F5F7F6" />
+
     <TextView
         android:id="@+id/textCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/addService"
-        android:layout_alignLeft="@id/addService"
+        android:layout_below="@id/headerText"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="120dp"
         android:text="Service Disponible : 0"
         android:textColor="#000"
+        android:alpha="0.6"
+
         android:textSize="17dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/addServiceRecy"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/addService"
+        android:layout_below="@+id/textCount"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="70dp"/>
 
 
 </RelativeLayout>
