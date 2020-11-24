@@ -1,6 +1,11 @@
 package com.example.servicenovigrad;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ServiceModel {
     private String serviceName;
@@ -17,6 +22,20 @@ public class ServiceModel {
         this.infoList = infoList;
         this.docList = docList;
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ServiceModel that = (ServiceModel) o;
+        return Objects.equals(serviceName, that.serviceName) &&
+                Objects.equals(servicePrice, that.servicePrice) &&
+                Objects.equals(infoList, that.infoList) &&
+                Objects.equals(docList, that.docList);
+    }
+
+
 
     public String getServiceName() {
         return serviceName;

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Home"
+            android:id="@+id/nav_Home"
+            android:icon="@drawable/ic_home"/>
+        <item android:title="Requete"
+            android:id="@+id/nav_Request"
+            android:icon="@drawable/ic_request_icon"/>
+        <item android:title="Services de Branche"
+            android:id="@+id/nav_branch"
+            android:icon="@drawable/ic_request_list"/>
+
+    </group>
+    <item android:title="Profil" >
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:title="Horaire de Travail"
+                    android:id="@+id/nav_horaire"
+                    android:icon="@drawable/ic_horaire"/>
+                <item android:title="Log out"
+                    android:id="@+id/nav_logOut"
+                    android:icon="@drawable/ic_logout"/>
+
+            </group>
+         </menu>
+    </item>
+
+</menu>

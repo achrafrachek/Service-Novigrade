@@ -10,15 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="info item"
-        android:gravity="center"
-        android:background="@drawable/btn_shape"
-        android:alpha="0.9"
         android:id="@+id/cardServiceName"
-        android:textColor="#F5F7F6"
-
+        android:background="@drawable/border"
         android:textSize="20dp"
         android:textAlignment="center"
-
+        android:backgroundTint="#16effa"
         />
 
 </RelativeLayout>

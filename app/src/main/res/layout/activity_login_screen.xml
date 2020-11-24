@@ -14,8 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:text="Welcome"
-        android:alpha="0.8"
-
+        android:textColor="#fff"
         android:textSize="40dp" />
 
     <EditText
@@ -26,7 +25,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
         android:hint="Username"
-        android:inputType="text" />
+        android:inputType="textEmailAddress"
+        android:textColorHint="#000"/>
 
     <EditText
         android:id="@+id/editPassword"
@@ -36,7 +36,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColorHint="#000"/>
 
     <Button
         android:id="@+id/butLogin"
@@ -44,10 +45,8 @@
         android:layout_height="50dp"
         android:layout_below="@id/editPassword"
         android:layout_centerHorizontal="true"
-        android:alpha="0.8"
-        android:background="@drawable/btn_shape"
-        android:textColor="#F5F7F6"
-        android:text="Login" />
+        android:text="Login"
+        android:background="@drawable/btn_shape"/>
 
     <Button
         android:id="@+id/butSwitch"
@@ -58,9 +57,7 @@
         android:layout_marginTop="20dp"
         android:text="Create Account?"
         android:textSize="20dp"
-        android:alpha="0.8"
-        android:background="@drawable/btn_shape"
-        android:textColor="#F5F7F6"/>
+        android:background="@drawable/btn_shape"/>
 
 
 </RelativeLayout>

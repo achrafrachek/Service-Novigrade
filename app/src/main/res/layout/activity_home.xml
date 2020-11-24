@@ -5,33 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".loginScreen"
-    android:background="@drawable/bg"
-     >
+    android:background="@drawable/bg">
 
     <TextView
         android:id="@+id/textConnexion"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="300dp"
-        android:layout_below="@+id/homeSwitch"
-        android:textSize="20dp"
-        android:textColor="#F5F7F6"
-   />
+        android:layout_centerInParent="true"
+
+        android:textSize="30dp"
+        android:textColor="#fff"/>
 
     <Button
-        android:id="@+id/homeSwitch"
-
         android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:alpha="0.9"
         android:layout_height="wrap_content"
+        android:layout_below="@id/textConnexion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:text="Service Manager"
-
-        android:background="@drawable/btn_shape"
-        android:textColor="#F5F7F6" />
+        android:textColor="#000"
+        android:backgroundTint="#3295a8"
+        android:id="@+id/homeSwitch"
+        />
 
 
 </RelativeLayout>

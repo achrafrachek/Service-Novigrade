@@ -39,6 +39,8 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+
+
         username = findViewById(R.id.regiUsername);
         password = findViewById(R.id.regiPassword);
         email = findViewById(R.id.regiEmail);
@@ -109,20 +111,24 @@ public class Register extends AppCompatActivity {
 
                     FirebaseUser users = auth.getCurrentUser();
                     String userId = users.getUid();
-
+                    User createUser;
                     myref = FirebaseDatabase.getInstance().getReference("MyUsers").child(userId);
-
-                    HashMap<String, String> hashmap = new HashMap<>();
-                    hashmap.put("id" , userId.toString());
-                    hashmap.put("username", username);
-                    hashmap.put("usertype", userTypeSelected);
+                    if(!userTypeSelected.equals("Employe")) {
 
 
-                    myref.setValue(hashmap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        createUser = new User(userId.toString(),userTypeSelected,username);
+
+                    }else{
+
+                        createUser = (employeeAccount) new employeeAccount(userId.toString(),userTypeSelected,username);
+                    }
+
+
+                    myref.setValue(createUser).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
-                                Intent i = new Intent(Register.this, Home.class);
+                                Intent i = new Intent(Register.this, loginScreen.class);
                                 startActivity(i);
                                 finish();
                             }

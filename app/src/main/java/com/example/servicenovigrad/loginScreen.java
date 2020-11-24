@@ -15,11 +15,18 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class loginScreen extends AppCompatActivity {
     EditText userLogin, passLogin;
     Button login, registerBut;
+
+    FirebaseUser userr;
 
 
     private FirebaseAuth auth;
@@ -28,6 +35,7 @@ public class loginScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
@@ -52,8 +60,37 @@ public class loginScreen extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                startActivity(new Intent(loginScreen.this, Home.class));
-                                finish();
+                                userr = FirebaseAuth.getInstance().getCurrentUser();
+                                myref = FirebaseDatabase.getInstance().getReference("MyUsers").child(userr.getUid());
+
+                                myref.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        User userA = snapshot.getValue(User.class);
+
+                                        if(userA.getUsertype().equals("Admin")){
+                                            startActivity(new Intent(loginScreen.this, AdminServiceManager.class));
+                                            finish();
+                                        }
+                                        else if (userA.getUsertype().equals("Employe")){
+
+                                            Intent i = new Intent(loginScreen.this, EmployeHome.class);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                        else{
+                                            Intent i = new Intent(loginScreen.this, Home.class);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                    }
+                                });
+
                             }
                             else{
                                 Toast.makeText(loginScreen.this, "Invalid Email or Password", Toast.LENGTH_LONG).show();

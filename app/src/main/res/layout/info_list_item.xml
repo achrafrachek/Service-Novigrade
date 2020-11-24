@@ -9,11 +9,11 @@
         android:id="@+id/txtInfoName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:background="@drawable/btn_shape"
-        android:alpha="0.9"
-        android:textColor="#F5F7F6"
+        android:background="@drawable/border"
+        android:backgroundTint="#16effa"
         android:text="info item"
-        />
+        android:textAlignment="center"
+
+        android:gravity="center_horizontal" />
 
 </RelativeLayout>

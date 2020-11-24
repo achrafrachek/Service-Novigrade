@@ -30,7 +30,7 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        User userA;
+
         printspace = findViewById(R.id.textConnexion);
         serviceManager = findViewById(R.id.homeSwitch);
 
@@ -42,12 +42,7 @@ public class Home extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User userA = snapshot.getValue(User.class);
                 printspace.setText("Connected as " + userA.getUsertype() +"   " + " Username  : "+ userA.getUsername());
-                if(userA.getUsertype().equals("Admin")){
-                    serviceManager.setVisibility(View.VISIBLE);
-                }
-                else{
-                    serviceManager.setVisibility(View.INVISIBLE);
-                }
+
             }
 
             @Override
@@ -57,14 +52,9 @@ public class Home extends AppCompatActivity {
         });
 
 
-        serviceManager.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Home.this, AdminServiceManager.class);
-                startActivity(i);
-                finish();
-            }
-        });
+
+
+
 
 
     }
