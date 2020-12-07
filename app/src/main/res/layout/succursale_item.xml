@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:background="@drawable/border1"
+    android:id="@+id/parent">
+
+    <TextView
+        android:id="@+id/succCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Succursale numero 1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold|italic"
+        android:textColor="#000"/>
+    <TextView
+        android:id="@+id/succZone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zone :"
+        android:layout_below="@id/succCount"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:id="@+id/succAdresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adresse  :"
+        android:layout_below="@id/succZone"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/succHoraire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horaire de Travail  : "
+        android:layout_below="@id/succAdresse"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:id="@+id/succService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service disponible  : "
+        android:layout_below="@id/succHoraire"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="15dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/succService"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_shape"
+        android:text="Evaluer la succurasale"
+        android:textColor="#fff"
+        android:id="@+id/evaluer"/>
+
+
+
+
+</RelativeLayout>

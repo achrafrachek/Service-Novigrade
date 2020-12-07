@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="buttSelected" type="id" />
+    <item name="buttSelectedcard" type="id" />
+    <item name="requestSubmit" type="id" />
+</resources>

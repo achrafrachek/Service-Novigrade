@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".requestService">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Demande pour service :"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textStyle="italic|bold"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:id="@+id/textviewCount"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name :"
+        android:textSize="16dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_below="@id/textviewCount"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/fName"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textviewCount"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:hint="Full Name"
+        android:id="@+id/editFullName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adress :"
+        android:textSize="16dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_below="@id/fName"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/adress"/>
+
+    <EditText
+
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fName"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:hint="Adress"
+        android:id="@+id/editAdress"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone  :"
+        android:textSize="16dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_below="@id/adress"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/phone"/>
+
+    <EditText
+        android:inputType="number"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adress"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:hint="Phone Number"
+        android:id="@+id/editPhone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Document Requis"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editPhone"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:id="@+id/textview1"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Picture : "
+        android:layout_below="@id/textview1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="16dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:id="@+id/picture"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No File uploaded"
+        android:layout_alignBaseline="@id/picture"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        android:id="@+id/pictureUploaded"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select File"
+        android:layout_alignBaseline="@id/picture"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:id="@id/buttSelected"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID Card : "
+        android:layout_below="@id/picture"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="16dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:id="@+id/idCard"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No File uploaded"
+        android:layout_alignBaseline="@id/idCard"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        android:id="@+id/cardUploaded"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select File"
+        android:layout_alignBaseline="@id/idCard"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:id="@id/buttSelectedcard"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_below="@id/idCard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_shape"
+        android:id="@id/requestSubmit"/>
+
+
+
+
+
+
+
+</RelativeLayout>

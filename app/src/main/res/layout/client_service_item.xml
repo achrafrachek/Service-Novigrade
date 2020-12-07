@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:background="@drawable/border1"
+    android:id="@+id/parent">
+
+    <TextView
+        android:id="@+id/addCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service numero 1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/addName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom du Service : "
+        android:layout_below="@id/addCount"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/addPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prix du Service : "
+        android:layout_below="@id/addName"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="15dp"/>
+
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addPrice"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="Faire une demande"
+        android:id="@+id/delteBranch"/>
+</RelativeLayout>

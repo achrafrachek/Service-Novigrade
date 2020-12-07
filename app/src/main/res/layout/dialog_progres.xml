@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="280dp"
+    android:layout_height="130dp"
+    android:layout_gravity="center"
+    android:background="@drawable/dialogbackground"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evaluer Succursale"
+
+        android:id="@+id/howDay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:textSize="17dp"
+        android:textStyle="bold"/>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/howDay"
+        android:src="@drawable/verysad"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/rating0"/>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/howDay"
+        android:src="@drawable/sad"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
+        android:id="@+id/rating1"/>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/howDay"
+        android:src="@drawable/meh"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="120dp"
+        android:id="@+id/rating2"/>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/howDay"
+        android:src="@drawable/good"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="170dp"
+        android:id="@+id/rating3"/>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/howDay"
+        android:src="@drawable/awesome"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="220dp"
+        android:id="@+id/rating4"/>
+
+</RelativeLayout>

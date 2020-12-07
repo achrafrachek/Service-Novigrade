@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientSearch">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filtre : "
+        android:layout_below="@id/textview1"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:id="@+id/choix"
+        android:layout_below="@id/textview1"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="110dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Rechercher une succursale"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold|italic"
+        android:id="@+id/textview1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adresse :"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:layout_below="@id/choix"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/adresse"/>
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/choix"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="110dp"
+        android:id="@+id/spinnerAdresse"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horaire :"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:layout_below="@id/choix"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/horaire"
+        android:visibility="invisible"/>
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/choix"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="110dp"
+        android:id="@+id/spinnerHoraire"
+        android:visibility="invisible"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service :"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:layout_below="@id/choix"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/service"
+        android:visibility="invisible"/>
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/choix"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="110dp"
+        android:id="@+id/spinnerService"
+        android:visibility="invisible"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rechercher"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/spinnerService"
+        android:id="@+id/rechercher"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rechercher"
+        android:layout_marginTop="30dp"
+        android:id="@+id/rechercheRecycler"/>
+
+</RelativeLayout>
