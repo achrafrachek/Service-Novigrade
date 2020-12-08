@@ -1,7 +1,23 @@
 package com.example.servicenovigrad;
 
 public class SuccursaleModel {
-    private String zone,adresse,horaire,service;
+    private String zone,adresse,horaire,service,rating;
+
+    public SuccursaleModel(String zone, String adresse, String horaire, String service, String rating) {
+        this.zone = zone;
+        this.adresse = adresse;
+        this.horaire = horaire;
+        this.service = service;
+        this.rating = rating;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
 
     public SuccursaleModel() {
     }
